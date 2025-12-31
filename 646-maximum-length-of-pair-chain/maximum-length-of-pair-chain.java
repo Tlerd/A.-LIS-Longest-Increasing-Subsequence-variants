@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 class Solution {
     public int findLongestChain(int[][] pairs) {
 
@@ -9,9 +7,8 @@ class Solution {
 
         int count = 1;
         int currentRight = pairs[0][1];
-
-        for (int i = 1; i < n; i++){
-            if (currentRight < pairs[i][0]){
+        for(int i = 1; i < n; i++) {
+            if(pairs[i][0] > currentRight) {
                 count++;
                 currentRight = pairs[i][1];
             }
